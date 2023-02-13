@@ -5,7 +5,7 @@
             "name": "Cookie",
             "age": 2,
             "breed": "Poodle",
-            "gender": "female",
+            "gender": "Female",
             "description": "Sweet Cookie would love to meet you! She is a charmer and can't get enough of being around people. She will be a wonderful companion. Just two years old, she is spayed, vaccinated, and ready to find her family.",
             "personality": "The Charmer",
             "image": "https://a-z-animals.com/media/Poodle-Canis-familiaris-white.jpg"
@@ -15,9 +15,9 @@
             "name": "Buddy",
             "age": 4,
             "breed": "Golden Retriever",
-            "gender": "male",
+            "gender": "Male",
             "description": "Buddy is a mellow and social boy! He has a loving temperment and is ready to be your new best friend.",
-            "personality": "The Shadow",
+            "personality": "The Social One",
             "image": "https://www.lombardvet.com/sites/default/files/styles/large/public/golden-retriever-dog-breed-info_0.jpg?itok=sYARdO3q"
         },
         {
@@ -25,9 +25,9 @@
             "name": "Tucker",
             "age": 1,
             "breed": "Siberian Husky",
-            "gender": "male",
+            "gender": "Male",
             "description": "Tucker would do best in a quiet home. He would love a confident companion dog sibling to help him come out of his reserved shell. He has been living in foster care and is ready for a new loving home that he can call his own.",
-            "personality": "The Shadow",
+            "personality": "The Reserved Companion",
             "image": "https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter.jpg"
         },
         {
@@ -35,9 +35,9 @@
             "name": "Bandit",
             "age": 6,
             "breed": "Australian Shepherd",
-            "gender": "female",
+            "gender": "Female",
             "description": "Bandit is friendly, loves treats, and is food driven. Happy all the time and would do well with other dogs of all sizes. Bandit is ready for her forver home!",
-            "personality": "The Shadow",
+            "personality": "The Food-Moviated One",
             "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-08/australian%20shepherd%20dog%20%281%29_0.jpg?h=fc67bbd6&itok=fxPlDshI"
         },
         {
@@ -45,9 +45,9 @@
             "name": "Max",
             "age": 2,
             "breed": "German Shepherd",
-            "gender": "male",
+            "gender": "Male",
             "description": "Max is looking for a home where he can be a playmate for another pet as he will do best with a friend. He is gregarious, outgoing, and loves outdoor play time!",
-            "personality": "The Shadow",
+            "personality": "The Playful One",
             "image": "https://i.natgeofe.com/n/187b3223-0b45-4aa5-ae5c-24793dd2d6cb/01-german-shepherd-coronavirus-bwtkdt.jpg?w=1272&h=848"
         },
         {
@@ -55,9 +55,9 @@
             "name": "Rex",
             "age": 5,
             "breed": "French Bulldog",
-            "gender": "male",
-            "description": "Pac-Man (1980)",
-            "personality": "The Shadow",
+            "gender": "Male",
+            "description": "Rex is a petite pup who would love to be your sidekick. He's the goodest boy: friendly, peaceful, mature, and great with other dogs. He is five years old, spayed, vaccinated, and ready to go!",
+            "personality": "The Cuddler",
             "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg"
         }
     ]
