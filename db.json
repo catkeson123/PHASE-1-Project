@@ -1,0 +1,64 @@
+{
+    "dogs": [
+        {
+            "id": 1,
+            "name": "Cookie",
+            "age": 2,
+            "breed": "Poodle",
+            "gender": "female",
+            "description": "Sweet Cookie would love to meet you! She is a charmer and can't get enough of being around people. She will be a wonderful companion. Just two years old, she is spayed, vaccinated, and ready to find her family.",
+            "personality": "The Charmer",
+            "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg"
+        },
+        {
+            "id": 2,
+            "name": "Buddy",
+            "age": 4,
+            "breed": "Golden Retriever",
+            "gender": "male",
+            "description": "Buddy is a mellow and social boy! He has a loving temperment and is ready to be your new best friend.",
+            "personality": "The Shadow",
+            "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg"
+        },
+        {
+            "id": 3,
+            "name": "Tucker",
+            "age": 1,
+            "breed": "Siberian Husky",
+            "gender": "male",
+            "description": "Tucker would do best in a quiet home. He would love a confident companion dog sibling to help him come out of his reserved shell. He has been living in foster care and is ready for a new loving home that he can call his own.",
+            "personality": "The Shadow",
+            "image": "https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Bandit",
+            "age": 6,
+            "breed": "Australian Shepherd",
+            "gender": "female",
+            "description": "Bandit is friendly, loves treats, and is food driven. Happy all the time and would do well with other dogs of all sizes. Bandit is ready for her forver home!",
+            "personality": "The Shadow",
+            "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg"
+        },
+        {
+            "id": 5,
+            "name": "Max",
+            "age": 2,
+            "breed": "German Shepherd",
+            "gender": "male",
+            "description": "Max is looking for a home where he can be a playmate for another pet as he will do best with a friend. He is gregarious, outgoing, and loves outdoor play time!",
+            "personality": "The Shadow",
+            "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg"
+        },
+        {
+            "id": 6,
+            "name": "Rex",
+            "age": 5,
+            "breed": "French Bulldog",
+            "gender": "male",
+            "description": "Pac-Man (1980)",
+            "personality": "The Shadow",
+            "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg"
+        }
+    ]
+}
