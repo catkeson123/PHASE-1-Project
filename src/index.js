@@ -71,6 +71,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const submit = document.createElement("input");
     submit.setAttribute("type", "submit");
     submit.setAttribute("value", "Adopt");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById(dog.id).remove();
+    });
+
     form.append(submit);
 
     document.getElementsByTagName("body")[0].appendChild(form);
@@ -78,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderDog(dog) {
     const card = document.createElement("div");
+    card.id = dog.id;
 
     const cardh2 = document.createElement("h2");
     cardh2.textContent = dog.name + " (" + dog.breed + ") ";
@@ -109,6 +116,11 @@ document.addEventListener("DOMContentLoaded", function () {
     adoptButton.addEventListener("click", () => {
       console.log("click");
       renderAdoptionForm(dog);
+
+      document.querySelector('#footer')
+      .scrollIntoView({
+        behavior: 'smooth'
+      });
     });
 
     card.append(adoptButton);
@@ -131,4 +143,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderDog(dog);
   });
+
+  
 });
