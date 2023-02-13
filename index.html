@@ -10,9 +10,11 @@
   <body>
     <h1>Dog Adoption</h1>
     <div id="allDogs"></div>
-    <form id="adoption-form">
+    <!--
+        <form id="adoption-form">
       <h3>Ready to adopt? Fill out the form below.</h3>
-          <label for="owner-name">Name: </label>
+          
+          <label for="owner-name">Your Name: </label>
           <input type="text" name="owner-name" placeholder="Full Name" />
             <br></br>
           <label for="pet-owner">Are you a current pet owner?: </label>
@@ -37,29 +39,33 @@
             <br></br>
           <input type="submit" value="Adopt" />
     </form>
+    -->
     <form id="posting-form">
       <h3>Need to post a dog for adoption?</h3>
       <h4>Please fill out the form below and we'll help them find their forever home.</h4>
-      <label for="dog-name">Name: </label>
-      <input type="text" name="dog-name" placeholder="Dog Name" />
+      <label for="dogName">Name: </label>
+      <input type="text" name="dogName" placeholder="Dog Name" />
         <br></br>
-      <label for="dog-age">Age: </label>
-      <input type="text" name="dog-age" placeholder="Dog Age" />
+      <label for="dogAge">Age: </label>
+      <input type="text" name="dogAge" placeholder="Dog Age" />
         <br></br>
-      <label for="dog-breed">Breed: </label>
-      <input type="text" name="dog-breed" placeholder="Dog Breed" />
+      <label for="dogBreed">Breed: </label>
+      <input type="text" name="dogBreed" placeholder="Dog Breed" />
         <br></br>
-      <label for="dog-gender">Gender: </label>
-      <select name="dog-gender">
+      <label for="dogGender">Gender: </label>
+      <select name="dogGender">
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
         <br></br>
-      <label for="dog-description">Description: </label>
-      <input type="text" name="dog-description" placeholder="Dog Description" />
+      <label for="dogDescription">Description: </label>
+      <input type="text" name="dogDescription" placeholder="Dog Description" />
         <br></br>
-      <label for="dog-image">Image: </label>
-      <input type="text" name="dog-image" placeholder="Dog Image" />
+        <label for="dogPersonality">Personality: </label>
+      <input type="text" name="dogPersonality" placeholder="Dog Personality" />
+        <br></br>
+      <label for="dogImage">Image: </label>
+      <input type="text" name="dogImage" placeholder="Dog Image" />
         <br></br>
       <input type="submit" value="Post" />
     </form>

@@ -1,42 +1,134 @@
 document.addEventListener("DOMContentLoaded", function () {
   const allDogs = document.querySelector("#allDogs");
-  
+  const postForm = document.querySelector("#posting-form");
 
   fetch("http://localhost:3000/dogs")
     .then((response) => response.json())
     .then((dogs) => {
-      console.log(dogs), dogs.forEach(renderDog);
+      dogs.forEach(renderDog);
     });
 
+  function renderAdoptionForm(dog) {
+    const form = document.createElement("form");
+    const header = document.createElement("h3");
+    header.textContent =
+      "Ready to adopt " + dog.name + "? Fill out the form below.";
+    form.append(header);
+
+    const br = document.createElement("br");
+
+    const ownerLabel = document.createElement("label");
+    ownerLabel.setAttribute("for", "ownerName");
+    ownerLabel.textContent = "Owner: ";
+    ownerName = document.createElement("input");
+    ownerName.setAttribute("type", "text");
+    ownerName.setAttribute("name", "ownerName");
+    ownerName.setAttribute("placeholder", "Your Name");
+    form.append(ownerLabel);
+    form.append(ownerName);
+    form.append(br);
+
+    const petLabel = document.createElement("label");
+    petLabel.setAttribute("for", "pet-owner");
+    petLabel.textContent = "Are you already a pet owner? ";
+    petOwner = document.createElement("select");
+    petOwner.setAttribute("name", "pet-owner");
+    yesOption = document.createElement("option");
+    yesOption.setAttribute("value", "yes");
+    yesOption.textContent = "Yes";
+    noOption = document.createElement("option");
+    noOption.setAttribute("value", "no");
+    noOption.textContent = "No";
+    petOwner.append(yesOption);
+    petOwner.append(noOption);
+    form.append(petLabel);
+    form.append(petOwner);
+    const br2 = document.createElement("br");
+    form.append(br2);
+
+    const activityLabel = document.createElement("label");
+    activityLabel.setAttribute("for", "activity-level");
+    activityLabel.textContent = "What level of activity are you looking for? ";
+    activityLevel = document.createElement("select");
+    activityLevel.setAttribute("name", "activity-level");
+    veryActive = document.createElement("option");
+    veryActive.setAttribute("value", "very-active");
+    veryActive.textContent = "Very Active";
+    moderatelyActive = document.createElement("option");
+    moderatelyActive.setAttribute("value", "moderately-active");
+    moderatelyActive.textContent = "Moderately Active";
+    lessActive = document.createElement("option");
+    lessActive.setAttribute("value", "less-active");
+    lessActive.textContent = "Less Active";
+    activityLevel.append(veryActive);
+    activityLevel.append(moderatelyActive);
+    activityLevel.append(lessActive);
+    form.append(activityLabel);
+    form.append(activityLevel);
+    const br3 = document.createElement("br");
+    form.append(br3);
+
+    const submit = document.createElement("input");
+    submit.setAttribute("type", "submit");
+    submit.setAttribute("value", "Adopt");
+    form.append(submit);
+
+    document.getElementsByTagName("body")[0].appendChild(form);
+  }
+
   function renderDog(dog) {
-    const card = document.createElement('div')
-    const cardh2 = document.createElement('h2')
-    cardh2.textContent = dog.name + " ( " + dog.breed + " ) "
-    card.append(cardh2)
+    const card = document.createElement("div");
+
+    const cardh2 = document.createElement("h2");
+    cardh2.textContent = dog.name + " (" + dog.breed + ") ";
+    card.append(cardh2);
+
     const img = document.createElement("img");
     img.src = dog.image;
-    img.alt = dog.name; 
-    card.append(img)
-    const dogDescription = document.createElement('p')
-    dogDescription.textContent = "Description: " + dog.description
-    card.append(dogDescription)
-    const dogAge = document.createElement('p')
-    dogAge.textContent = "Age: " + dog.age + " years old" 
-    card.append(dogAge)
-    const dogGender = document.createElement('p')
-    dogGender.textContent = "Gender: " + dog.gender
-    card.append(dogGender)
-    const dogPersonality = document.createElement('p')
-    dogPersonality.textContent = "Personality: " + dog.personality
-    card.append(dogPersonality)
+    img.alt = dog.name;
+    card.append(img);
 
-    const adoptButton = document.createElement('button')
-    adoptButton.textContent = "Adopt Me!"
-    card.append(adoptButton)
-    
+    const dogDescription = document.createElement("p");
+    dogDescription.textContent = "Description: " + dog.description;
+    card.append(dogDescription);
 
+    const dogAge = document.createElement("p");
+    dogAge.textContent = "Age: " + dog.age + " years old";
+    card.append(dogAge);
 
-    allDogs.append(card) 
-    
+    const dogGender = document.createElement("p");
+    dogGender.textContent = "Gender: " + dog.gender;
+    card.append(dogGender);
+
+    const dogPersonality = document.createElement("p");
+    dogPersonality.textContent = "Personality: " + dog.personality;
+    card.append(dogPersonality);
+
+    const adoptButton = document.createElement("button");
+    adoptButton.textContent = "Adopt Me!";
+    adoptButton.addEventListener("click", () => {
+      console.log("click");
+      renderAdoptionForm(dog);
+    });
+
+    card.append(adoptButton);
+
+    allDogs.append(card);
   }
+
+  postForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const dog = {
+      name: e.target.dogName.value,
+      age: e.target.dogAge.value,
+      breed: e.target.dogBreed.value,
+      gender: e.target.dogGender.value,
+      description: e.target.dogDescription.value,
+      personality: e.target.dogPersonality.value,
+      image: e.target.dogImage.value,
+    };
+
+    renderDog(dog);
+  });
 });
