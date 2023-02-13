@@ -75,6 +75,10 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       document.getElementById(dog.id).remove();
+      fetch(`http://localhost:3000/dogs/${dog.id}`, {
+        method: "DELETE"
+      })
+
     });
 
     form.append(submit);
@@ -141,8 +145,20 @@ document.addEventListener("DOMContentLoaded", function () {
       image: e.target.dogImage.value,
     };
 
-    renderDog(dog);
+    fetch("http://localhost:3000/dogs", {
+      method:"POST",
+      headers:{
+        "Content-Type": "application/json", 
+      },
+      body: JSON.stringify(dog)
+
+    })
+    .then(res => res.json())
+    .then(dog => renderDog(dog))
+    postForm.reset()
+   
   });
 
+  
   
 });
