@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
       fetch(`http://localhost:3000/dogs/${dog.id}`, {
         method: "DELETE",
       });
+      form.remove();
     });
 
     form.append(submit);
@@ -91,11 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
     card.id = dog.id;
     card.className = "card";
 
-
     const cardh2 = document.createElement("h2");
     cardh2.textContent = dog.name + " (" + dog.breed + ")";
     card.append(cardh2);
-
 
     const img = document.createElement("img");
     img.src = dog.image;
@@ -110,27 +109,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     card.addEventListener("mouseout", (e) => {
       img.src = dog.image;
-      card.className = "card"
+      card.className = "card";
     });
 
     const dogDescription = document.createElement("p");
-    dogDescription.textContent = "Description: " + dog.description;
+    dogDescription.innerHTML = "<b>Description: </b>" + dog.description;
     card.append(dogDescription);
 
     const dogAge = document.createElement("p");
-    dogAge.textContent = "Age: " + dog.age + " years old";
+    dogAge.innerHTML = "<b>Age: </b>" + dog.age + " years old";
     card.append(dogAge);
 
     const dogGender = document.createElement("p");
-    dogGender.textContent = "Gender: " + dog.gender;
+    dogGender.innerHTML = "<b>Gender: </b>" + dog.gender;
     card.append(dogGender);
 
     const dogPersonality = document.createElement("p");
-    dogPersonality.textContent = "Personality: " + dog.personality;
+    dogPersonality.innerHTML = "<b>Personality: </b>" + dog.personality;
     card.append(dogPersonality);
 
     const adoptButton = document.createElement("button");
-    adoptButton.textContent = "Adopt Me!";
+    adoptButton.innerHTML = "<b>Adopt Me!</b>";
     adoptButton.addEventListener("click", () => {
       console.log("click");
       renderAdoptionForm(dog);
@@ -156,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
       description: e.target.dogDescription.value,
       personality: e.target.dogPersonality.value,
       image: e.target.dogImage.value,
+      altImage: e.target.altImage.value,
     };
 
     fetch("http://localhost:3000/dogs", {

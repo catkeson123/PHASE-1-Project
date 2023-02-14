@@ -20,7 +20,7 @@
       "description": "Buddy is a mellow and social boy! He has a loving temperment and is ready to be your new best friend.",
       "personality": "The Social One",
       "image": "https://www.lombardvet.com/sites/default/files/styles/large/public/golden-retriever-dog-breed-info_0.jpg?itok=sYARdO3q",
-      "altImage":"https://image1.masterfile.com/getImage/NzAwLTAxMjIzMjcxZW4uMDAwMDAwMDA=AH26$2/700-01223271en_Masterfile.jpg"
+      "altImage": "https://image1.masterfile.com/getImage/NzAwLTAxMjIzMjcxZW4uMDAwMDAwMDA=AH26$2/700-01223271en_Masterfile.jpg"
     },
     {
       "id": 3,
@@ -31,7 +31,7 @@
       "description": "Tucker would do best in a quiet home. He would love a confident companion dog sibling to help him come out of his reserved shell. He has been living in foster care and is ready for a new loving home that he can call his own.",
       "personality": "The Reserved Companion",
       "image": "https://www.akc.org/wp-content/uploads/2017/11/Siberian-Husky-standing-outdoors-in-the-winter.jpg",
-      "altImage":"https://preview.redd.it/d35dp4fjcyn81.jpg?auto=webp&s=598a637d5a7d3899b0068be0154aff8c4d93d710"
+      "altImage": "https://preview.redd.it/d35dp4fjcyn81.jpg?auto=webp&s=598a637d5a7d3899b0068be0154aff8c4d93d710"
     },
     {
       "id": 4,
@@ -42,7 +42,7 @@
       "description": "Bandit is friendly, loves treats, and is food driven. Happy all the time and would do well with other dogs of all sizes. Bandit is ready for her forver home!",
       "personality": "The Food-Moviated One",
       "image": "https://www.purina.co.uk/sites/default/files/styles/square_medium_440x440/public/2022-08/australian%20shepherd%20dog%20%281%29_0.jpg?h=fc67bbd6&itok=fxPlDshI",
-      "altImage":"https://www.pumpkin.care/wp-content/uploads/2020/12/Australian-Shepherd-Hero-1200x628.jpg"
+      "altImage": "https://www.pumpkin.care/wp-content/uploads/2020/12/Australian-Shepherd-Hero-1200x628.jpg"
     },
     {
       "id": 5,
@@ -53,7 +53,7 @@
       "description": "Max is looking for a home where he can be a playmate for another pet as he will do best with a friend. He is gregarious, outgoing, and loves outdoor play time!",
       "personality": "The Playful One",
       "image": "https://i.natgeofe.com/n/187b3223-0b45-4aa5-ae5c-24793dd2d6cb/01-german-shepherd-coronavirus-bwtkdt.jpg?w=1272&h=848",
-      "altImage":"https://cdn.shopify.com/s/files/1/2456/1591/files/7_d7a4395a-c018-408b-8221-6690b24e137c_480x480.jpg?v=1605888440"
+      "altImage": "https://cdn.shopify.com/s/files/1/2456/1591/files/7_d7a4395a-c018-408b-8221-6690b24e137c_480x480.jpg?v=1605888440"
     },
     {
       "name": "Rex",
@@ -64,7 +64,7 @@
       "personality": "The Cuddler",
       "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg",
       "id": 6,
-      "altImage":"https://i.pinimg.com/originals/0c/b6/aa/0cb6aa7633603c3af88e5c70a2289356.jpg"
+      "altImage": "https://i.pinimg.com/originals/0c/b6/aa/0cb6aa7633603c3af88e5c70a2289356.jpg"
     }
   ]
 }

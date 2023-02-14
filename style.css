@@ -1,9 +1,22 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
 h1 {
     text-align: center
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    background-color: #CFB997;
+    font-family: Marker Felt, fantasy
+}
+
+#header img {
+    height: 70px;
+    width: 70px
 }
 
 .card {
@@ -70,7 +83,9 @@ h1 {
     background-color: #CFB997;
     width: 60%;
     margin: auto;
-    padding: 20px
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
   }
 
   #form-container h3, h4 {
