@@ -15,57 +15,50 @@ document.addEventListener("DOMContentLoaded", function () {
     header.textContent =
       "Ready to adopt " + dog.name + "? Fill out the form below.";
     form.append(header);
-
+    
     const br = document.createElement("br");
 
     const ownerLabel = document.createElement("label");
     ownerLabel.setAttribute("for", "ownerName");
     ownerLabel.textContent = "Owner: ";
-    ownerName = document.createElement("input");
+    const ownerName = document.createElement("input");
     ownerName.setAttribute("type", "text");
     ownerName.setAttribute("name", "ownerName");
     ownerName.setAttribute("placeholder", "Your Name");
-    form.append(ownerLabel);
-    form.append(ownerName);
-    form.append(br);
+    form.append(ownerLabel, ownerName, br);
 
     const petLabel = document.createElement("label");
     petLabel.setAttribute("for", "pet-owner");
     petLabel.textContent = "Are you already a pet owner? ";
-    petOwner = document.createElement("select");
+    const petOwner = document.createElement("select");
     petOwner.setAttribute("name", "pet-owner");
-    yesOption = document.createElement("option");
+    const yesOption = document.createElement("option");
     yesOption.setAttribute("value", "yes");
     yesOption.textContent = "Yes";
-    noOption = document.createElement("option");
+    const noOption = document.createElement("option");
     noOption.setAttribute("value", "no");
     noOption.textContent = "No";
-    petOwner.append(yesOption);
-    petOwner.append(noOption);
-    form.append(petLabel);
-    form.append(petOwner);
+    petOwner.append(yesOption, noOption);
+    form.append(petLabel, petOwner);
     const br2 = document.createElement("br");
     form.append(br2);
 
     const activityLabel = document.createElement("label");
     activityLabel.setAttribute("for", "activity-level");
     activityLabel.textContent = "What level of activity are you looking for? ";
-    activityLevel = document.createElement("select");
+    const activityLevel = document.createElement("select");
     activityLevel.setAttribute("name", "activity-level");
-    veryActive = document.createElement("option");
+    const veryActive = document.createElement("option");
     veryActive.setAttribute("value", "very-active");
     veryActive.textContent = "Very Active";
-    moderatelyActive = document.createElement("option");
+    const moderatelyActive = document.createElement("option");
     moderatelyActive.setAttribute("value", "moderately-active");
     moderatelyActive.textContent = "Moderately Active";
-    lessActive = document.createElement("option");
+    const lessActive = document.createElement("option");
     lessActive.setAttribute("value", "less-active");
     lessActive.textContent = "Less Active";
-    activityLevel.append(veryActive);
-    activityLevel.append(moderatelyActive);
-    activityLevel.append(lessActive);
-    form.append(activityLabel);
-    form.append(activityLevel);
+    activityLevel.append(veryActive, moderatelyActive, lessActive);
+    form.append(activityLabel, activityLevel);
     const br3 = document.createElement("br");
     form.append(br3);
 
