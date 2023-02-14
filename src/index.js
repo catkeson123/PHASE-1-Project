@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderAdoptionForm(dog) {
     const form = document.createElement("form");
-    form.className = "form";
+    form.id = "form-container";
     const header = document.createElement("h3");
     header.textContent =
       "Ready to adopt " + dog.name + "? Fill out the form below.";
