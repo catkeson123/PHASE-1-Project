@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function renderAdoptionForm(dog) {
     const form = document.createElement("form");
+    form.className = "form";
     const header = document.createElement("h3");
     header.textContent =
       "Ready to adopt " + dog.name + "? Fill out the form below.";
@@ -76,9 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       document.getElementById(dog.id).remove();
       fetch(`http://localhost:3000/dogs/${dog.id}`, {
-        method: "DELETE"
-      })
-
+        method: "DELETE",
+      });
     });
 
     form.append(submit);
@@ -89,6 +89,15 @@ document.addEventListener("DOMContentLoaded", function () {
   function renderDog(dog) {
     const card = document.createElement("div");
     card.id = dog.id;
+    card.className = "card";
+
+    card.addEventListener("mouseover", (e) => {
+      card.className = "cardAlt";
+    });
+
+    card.addEventListener("mouseout", (e) => {
+      card.className = "card";
+    });
 
     const cardh2 = document.createElement("h2");
     cardh2.textContent = dog.name + " (" + dog.breed + ") ";
@@ -97,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const img = document.createElement("img");
     img.src = dog.image;
     img.alt = dog.name;
+    img.className = "cardImg";
     card.append(img);
 
     const dogDescription = document.createElement("p");
@@ -121,9 +131,8 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("click");
       renderAdoptionForm(dog);
 
-      document.querySelector('#footer')
-      .scrollIntoView({
-        behavior: 'smooth'
+      document.querySelector("#footer").scrollIntoView({
+        behavior: "smooth",
       });
     });
 
@@ -146,19 +155,14 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     fetch("http://localhost:3000/dogs", {
-      method:"POST",
-      headers:{
-        "Content-Type": "application/json", 
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(dog)
-
+      body: JSON.stringify(dog),
     })
-    .then(res => res.json())
-    .then(dog => renderDog(dog))
-    postForm.reset()
-   
+      .then((res) => res.json())
+      .then((dog) => renderDog(dog));
+    postForm.reset();
   });
-
-  
-  
 });
