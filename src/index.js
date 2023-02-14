@@ -91,23 +91,27 @@ document.addEventListener("DOMContentLoaded", function () {
     card.id = dog.id;
     card.className = "card";
 
-    card.addEventListener("mouseover", (e) => {
-      card.className = "cardAlt";
-    });
-
-    card.addEventListener("mouseout", (e) => {
-      card.className = "card";
-    });
 
     const cardh2 = document.createElement("h2");
-    cardh2.textContent = dog.name + " (" + dog.breed + ") ";
+    cardh2.textContent = dog.name + " (" + dog.breed + ")";
     card.append(cardh2);
+
 
     const img = document.createElement("img");
     img.src = dog.image;
     img.alt = dog.name;
     img.className = "cardImg";
     card.append(img);
+
+    card.addEventListener("mouseover", (e) => {
+      img.src = dog.altImage;
+      card.className = "cardAlt";
+    });
+
+    card.addEventListener("mouseout", (e) => {
+      img.src = dog.image;
+      card.className = "card"
+    });
 
     const dogDescription = document.createElement("p");
     dogDescription.textContent = "Description: " + dog.description;

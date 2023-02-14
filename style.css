@@ -14,7 +14,7 @@ h1 {
     height: 35rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #e04b52;
+    box-shadow: 3px 4px #567189;
     border-radius: 5px
   }
 
@@ -26,9 +26,9 @@ h1 {
     height: 35rem;
     display: inline-grid;
     margin: 1rem 2rem;
-    box-shadow: 3px 4px #e04b52;
+    box-shadow: 3px 4px #567189;
     border-radius: 5px;
-    background-color: red;
+    background-color: #8DCBE6;
   }
 
   .cardImg {
@@ -38,6 +38,7 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
+
   }
 
   input[type=text], select {
@@ -66,7 +67,7 @@ h1 {
   }
 
   #form-container {
-    background-color: aqua;
+    background-color: #CFB997;
     width: 60%;
     margin: auto;
     padding: 20px
