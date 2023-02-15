@@ -66,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
     submit.setAttribute("type", "submit");
     submit.setAttribute("value", "Adopt");
 
+    form.append(submit);
+
+    document.getElementsByTagName("body")[0].appendChild(form);
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       document.getElementById(dog.id).remove();
@@ -74,10 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
       form.remove();
     });
-
-    form.append(submit);
-
-    document.getElementsByTagName("body")[0].appendChild(form);
   }
 
   function renderDog(dog) {
@@ -161,5 +161,25 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((res) => res.json())
       .then((dog) => renderDog(dog));
     postForm.reset();
+  });
+    
+    const dogFactButton = document.querySelector("#dogFactButton");
+    const dogFactParagraph = document.querySelector("#dogFactParagraph");
+    
+    fetch('https://dog-api.kinduff.com/api/facts?number=1')
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data)
+      dogFactParagraph.textContent = data.facts[0];
+  })
+
+    dogFactButton.addEventListener('click',
+    (e) => {
+      fetch('https://dog-api.kinduff.com/api/facts?number=1')
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        dogFactParagraph.textContent = data.facts[0];
+    })
   });
 });
