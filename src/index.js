@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const allDogs = document.querySelector("#allDogs");
   const postForm = document.querySelector("#posting-form");
+  const topOfPage = document.querySelector("#header");
 
   fetch("http://localhost:3000/dogs")
     .then((response) => response.json())
@@ -72,6 +73,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+
+      topOfPage.scrollIntoView({
+        behavior: "smooth",
+      });
+
+      // Get the modal
+      const modal = document.getElementById("myModal");
+
+      // Get the <span> element that closes the modal
+      const span = document.getElementsByClassName("close")[0];
+
+      // Opens the modal
+      modal.style.display = "block";
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+      modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+      modal.style.display = "none";
+        }
+      }
+      
+      confetti("tsparticles", {
+        angle: 270,
+        count: 30,
+        position: { x: 50, y: 0 },
+        spread: 300,
+        startVelocity: 60,
+        decay: 0.9,
+        gravity: 1,
+        drift: 0,
+        ticks: 250,
+        colors: ["#0F6292", "#8BF5FA", "#ECF9FF"],
+        shapes: ["square"],
+        scalar: 1,
+        zIndex: 2000,
+        disableForReducedMotion: true
+      });
+
       document.getElementById(dog.id).remove();
       fetch(`http://localhost:3000/dogs/${dog.id}`, {
         method: "DELETE",
