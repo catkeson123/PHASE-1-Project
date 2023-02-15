@@ -65,17 +65,6 @@
       "image": "https://image.petmd.com/files/styles/863x625/public/2022-10/french-bulldog.jpeg",
       "id": 6,
       "altImage": "https://i.pinimg.com/originals/0c/b6/aa/0cb6aa7633603c3af88e5c70a2289356.jpg"
-    },
-    {
-      "name": "Bob",
-      "age": "3",
-      "breed": "Lab",
-      "gender": "Male",
-      "description": "sdf",
-      "personality": "",
-      "image": "",
-      "altImage": "",
-      "id": 7
     }
   ]
 }

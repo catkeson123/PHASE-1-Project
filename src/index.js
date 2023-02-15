@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     header.textContent =
       "Ready to adopt " + dog.name + "? Fill out the form below.";
     form.append(header);
-    
+
     const br = document.createElement("br");
 
     const ownerLabel = document.createElement("label");
@@ -124,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const adoptButton = document.createElement("button");
     adoptButton.innerHTML = "<b>Adopt Me!</b>";
     adoptButton.addEventListener("click", () => {
-      console.log("click");
       renderAdoptionForm(dog);
 
       document.querySelector("#footer").scrollIntoView({
@@ -162,24 +161,21 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((dog) => renderDog(dog));
     postForm.reset();
   });
-    
-    const dogFactButton = document.querySelector("#dogFactButton");
-    const dogFactParagraph = document.querySelector("#dogFactParagraph");
-    
-    fetch('https://dog-api.kinduff.com/api/facts?number=1')
+
+  const dogFactButton = document.querySelector("#dogFactButton");
+  const dogFactParagraph = document.querySelector("#dogFactParagraph");
+
+  fetch("https://dog-api.kinduff.com/api/facts?number=1")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data)
       dogFactParagraph.textContent = data.facts[0];
-  })
+    });
 
-    dogFactButton.addEventListener('click',
-    (e) => {
-      fetch('https://dog-api.kinduff.com/api/facts?number=1')
+  dogFactButton.addEventListener("click", (e) => {
+    fetch("https://dog-api.kinduff.com/api/facts?number=1")
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
         dogFactParagraph.textContent = data.facts[0];
-    })
+      });
   });
 });
